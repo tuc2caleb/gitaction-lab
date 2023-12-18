@@ -36,6 +36,7 @@ data "aws_ami" "ubuntu" {
 
 
 resource "aws_security_group" "web-sg" {
+  description = "Allow http"
   name = "${random_pet.sg.id}-sg"
   description = "Ingress on port 8000"
   ingress {

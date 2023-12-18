@@ -36,6 +36,7 @@ data "aws_ami" "ubuntu" {
 
 
 resource "aws_security_group" "web-sg" {
+  description = "Security group to allow http"
   name = "${random_pet.sg.id}-sg"
   ingress {
     from_port   = 8080
